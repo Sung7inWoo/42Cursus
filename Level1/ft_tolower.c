@@ -6,13 +6,13 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:17:57 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/15 18:21:23 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/16 15:29:42 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (c + 32);

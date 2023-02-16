@@ -6,13 +6,13 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:16:58 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/15 18:21:29 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/16 16:55:49 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);

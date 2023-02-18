@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 01:28:32 by hani              #+#    #+#             */
-/*   Updated: 2023/02/17 02:51:06 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/18 14:43:45 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
 	int	i;
 	char	*ptr;
@@ -23,8 +23,9 @@ char	*strchr(const char *str, int c)
 		return (NULL);
 	while (*ptr)
 	{
-		if (*(ptr + i) == c)
-			return (ptr);
+		if (*(ptr + i) == (unsigned char)c)
+			return (&ptr[i]);
+		i++;
 	}
 	return (NULL);
 }

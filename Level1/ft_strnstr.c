@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 03:18:34 by hani              #+#    #+#             */
-/*   Updated: 2023/02/18 14:13:28 by jthanikp         ###   ########.fr       */
+/*   Created: 2023/02/18 15:01:00 by jthanikp          #+#    #+#             */
+/*   Updated: 2023/02/18 16:46:06 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strnstr(const char *str, const char *to_search, size_t len)
 {
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
-	int	res;
+	size_t	i;
+	size_t	j;
 
-	ptr1 = (unsigned char *)s1;
-	ptr2 = (unsigned char *)s2;
-	res = 0;
-	if (*ptr1 == *ptr2)
-		return (0);
-	while (n-- > 0)
+	i = 0;
+	if (to_search[0] == '\0')
+		return ((char *)str);
+	while (i < len)
 	{
-		if (*ptr1 != *ptr2)
-			res = (*ptr1 - *ptr2);
+		j = 0;
+		while (str[i + j] == to_search[j] && (!(to_search[i])))
+		{
+			j++;
+		}
+		if (to_search[j])
+			return ((char *)&str[i]);
+		i++;
 	}
-	return (res);
+	return (NULL);
 }

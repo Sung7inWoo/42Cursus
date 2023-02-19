@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 23:10:41 by hani              #+#    #+#             */
-/*   Updated: 2023/02/19 01:14:22 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/19 16:02:08 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 The memmove() function copies len bytes from string src to string dst.
      The two strings may overlap; the copy is always done in a non-destructive
      manner.
-
-RETURN VALUES
-     The memmove() function returns the original value of dst.
+RETURN The memmove() function returns the original value of dst.
 */
 
 #include "libft.h"

@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 21:23:45 by hani              #+#    #+#             */
-/*   Updated: 2023/02/19 15:52:22 by jthanikp         ###   ########.fr       */
+/*   Created: 2023/02/19 13:38:13 by jthanikp          #+#    #+#             */
+/*   Updated: 2023/02/19 16:04:15 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	The bzero() function writes n zeroed bytes to the string s.  If n is zero, bzero() does
-     nothing.
+	Outputs the string ’s’ to the given file descriptor.
 */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned char	*ptr;
+	int	i;
 
-	ptr = str;
-	while (n-- > 0)
-		*ptr++ = '\0';
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+	ft_putchar_fd('\n', fd);
 }

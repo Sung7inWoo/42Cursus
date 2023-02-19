@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 23:56:33 by hani              #+#    #+#             */
-/*   Updated: 2023/02/19 16:07:42 by jthanikp         ###   ########.fr       */
+/*   Created: 2023/02/19 15:12:44 by jthanikp          #+#    #+#             */
+/*   Updated: 2023/02/19 17:49:35 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	The strdup() function allocates sufficient memory for a copy of the string s1, does the
-     copy, and returns a pointer to it.
-	If insufficient memory is available, NULL is returned.
-*/
-
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*ptr;
-	int	i;
+	size_t	start;
+	size_t	len;
 
-	i = 0;
-	ptr = (char *)malloc(ft_strlen(src) * sizeof(char));
-	if (!(ptr))
+	start = 0;
+	if (s1 == NULL)
 		return (NULL);
-	while (src[i])
+	if (set == NULL)
+		return (ft_strdup(s1));
+	while (ft_strchr(set, s1[start++]) != NULL)
 	{
-		ptr[i] = src[i];
-		i++;
+		if (start == ft_strlen(s1))
+			return (ft_strdup(""));
 	}
-	ptr[i] = '\0';
-	return (ptr);
+	start = 0;
+	while (ft_strchr(set, s1[start]) != NULL)
+		start++;
+	len = ft_strlen(s1) - 1;
+	while (ft_strchr(set, s1[len]) != NULL)
+		len--;
+	return (ft_substr(s1, start, (len - start + 1)));
 }

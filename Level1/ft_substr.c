@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 21:23:45 by hani              #+#    #+#             */
-/*   Updated: 2023/02/19 15:52:22 by jthanikp         ###   ########.fr       */
+/*   Created: 2023/02/19 13:53:33 by jthanikp          #+#    #+#             */
+/*   Updated: 2023/02/19 14:52:03 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	The bzero() function writes n zeroed bytes to the string s.  If n is zero, bzero() does
-     nothing.
-*/
-
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*ptr;
+	char	*ptr;
+	size_t	i;
+	size_t	size;
 
-	ptr = str;
-	while (n-- > 0)
-		*ptr++ = '\0';
+	if (s == NULL)
+		return (NULL);
+	if (ft_strlen(s) <= start || len == 0)
+		return (ft_strdup(""));
+	i = ft_strlen(&s[start]);
+	if (i < len)
+		size = i + 1;
+	else
+		size = len + 1;
+	ptr = (char *)malloc(size * sizeof(char));
+	if (!(ptr))
+		return (NULL);
+	ft_strlcpy(ptr, &s[start], size);
+	return (ptr);
 }

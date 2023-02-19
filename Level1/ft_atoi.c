@@ -6,9 +6,14 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:14:52 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/16 17:38:13 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/19 15:51:54 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The atoi() function converts the initial portion of the string pointed to by str to int
+     representation.
+*/
 
 #include "libft.h"
 

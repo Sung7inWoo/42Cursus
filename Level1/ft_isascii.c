@@ -6,9 +6,13 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:17:27 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/15 18:20:53 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/19 15:57:28 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The isascii() function tests for an ASCII character
+*/
 
 #include "libft.h"
 

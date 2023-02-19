@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 21:23:45 by hani              #+#    #+#             */
-/*   Updated: 2023/02/19 15:52:22 by jthanikp         ###   ########.fr       */
+/*   Created: 2023/02/19 14:52:40 by jthanikp          #+#    #+#             */
+/*   Updated: 2023/02/19 16:08:36 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	The bzero() function writes n zeroed bytes to the string s.  If n is zero, bzero() does
-     nothing.
+	Allocates (with malloc(3)) and returns a new string,
+	which is the result of the concatenation of ’s1’ and ’s2’.
 */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned char	*ptr;
+	char	*ptr;
 
-	ptr = str;
-	while (n-- > 0)
-		*ptr++ = '\0';
+	ptr = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char));
+	if (!(ptr))
+		return (NULL);
+	ft_strlcpy(ptr, s1, ft_strlen(s1) + 1);
+	ft_strlcpy(ptr + ft_strlen(ptr), s2, ft_strlen(s2) + 1);
+	return (ptr);
 }

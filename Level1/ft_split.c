@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 15:00:10 by hani              #+#    #+#             */
-/*   Updated: 2023/02/21 19:04:34 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/21 21:35:08 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ char	**ft_split(char const *s, char c)
 	{
 		arr[i] = subcpy((char *)s, c, i);
 		if (arr[i] == NULL)
-			free_mem(arr, i);
+			return (free_mem(arr, i));
 		i++;
 	}
 	return (arr);

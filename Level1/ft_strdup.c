@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 23:56:33 by hani              #+#    #+#             */
-/*   Updated: 2023/02/19 16:07:42 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/21 13:34:34 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strdup(const char *src)
 	int	i;
 
 	i = 0;
-	ptr = (char *)malloc(ft_strlen(src) * sizeof(char));
+	ptr = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
 	if (!(ptr))
 		return (NULL);
 	while (src[i])

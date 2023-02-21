@@ -3,51 +3,95 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 15:00:10 by hani              #+#    #+#             */
-/*   Updated: 2023/02/21 00:23:14 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/21 19:04:34 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count(char *s, char c)
+static void	*free_mem(char **s, int i)
+{
+	int	j;
+
+	j = 0;
+	while (j < i)
+	{
+		free(s[j]);
+		j++;
+	}
+	free(*s);
+	return (NULL);
+}
+
+static int	count(char *s, char c)
 {
 	int	n;
 	int	i;
 
 	i = 0;
-	n = 1;
+	n = 0;
+	if (s[i] == '\0')
+		return (n);
+	if (i == 0 && s[i] != c)
+	{
+		n++;
+		i++;
+	}
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] != c && s[i - 1] == c && i > 0)
 			n++;
 		i++;
 	}
 	return (n);
 }
 
+static char	*subcpy(char *s, char c, int num)
+{
+	int	i;
+	int	start;
+	int	end;
+	char	*ptr;
+
+	i = 0;
+	end = 0;
+	while (i <= num)
+	{
+		while (s[end] == c)
+			end++;
+		start = end;
+		while (s[end] != c && s[end])
+			end++;
+		if (i == num)
+			ptr = ft_substr(s, start, end - start);
+		i++;
+	}
+	return (ptr);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
 	int	i;
-	int	j;
-	int	k;
+	int	num;
 
 	i = 0;
-	k = 0;
-	arr = (char **)malloc((count((char *)s, c)) * sizeof(char));
+	num = count((char *)s, c);
+	arr = (char **)malloc((num + 1) * sizeof(char *));
 	if (!(arr))
 		return (NULL);
-	while (s[i])
+	if (s == NULL)
+		return (NULL);
+	arr[num] = NULL;
+	while (i < num)
 	{
-		j = i;
-		while (s[j] != c && s[j])
-			j++;
-		arr[k++] = ft_substr(s, i, j - i);
-		i = j + 1;
+		arr[i] = subcpy((char *)s, c, i);
+		if (arr[i] == NULL)
+			free_mem(arr, i);
+		i++;
 	}
-	arr[k] = NULL;
 	return (arr);
 }

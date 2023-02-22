@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 19:34:39 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/22 19:49:26 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/22 23:36:46 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	// lst = &new->next;
-	// (void *)lst1 = (lst);
-	// new->next = NULL;
-	new = NULL;
-	while (lst)
-	{
-		//*lst = *lst->next;
-	}
-	//(*lst)
-	//return (i);
+	t_list	*last;
 
+	last = *lst;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	new->next = NULL;
+	while (last->next != NULL)
+		last = last->next;
+	last->next = new;
+	return ;
 }

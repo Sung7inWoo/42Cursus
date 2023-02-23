@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:35:35 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/22 23:35:54 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/23 18:53:07 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
-	while (lst)
+	while(lst)
 	{
 		lst = lst->next;
 		i++;

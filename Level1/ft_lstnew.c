@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:06:58 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/22 22:52:23 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/23 16:08:20 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*ptr;
 
-	ptr = (void *)malloc(sizeof(content));
-	if (!(ptr))
-		return (NULL);
-	ptr->content = content;
-	ptr->next = NULL;
+	ptr = NULL;
+	ptr = (t_list *)malloc(sizeof(t_list));
+	if (ptr != NULL)
+	{
+		ptr->content = content;
+		ptr->next = NULL;
+	}
 	return (ptr);
 }

@@ -3,20 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 02:52:22 by hani              #+#    #+#             */
-/*   Updated: 2023/02/18 21:50:15 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/25 22:08:33 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_strrchr locates the last occurence of c
+	in the string pointed to by s, this included the null character.
+	Return a pointer to the located character.
+*/
 
 #include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
 	char	*ptr;
-	int	len_s;
-	int	i;
+	int		len_s;
+	int		i;
 
 	i = 0;
 	len_s = ft_strlen(str);

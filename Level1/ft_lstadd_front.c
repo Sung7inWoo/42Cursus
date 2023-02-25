@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:03:02 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/24 20:18:24 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/25 21:33:11 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_lstadd_front add a new node at the begining of the list.
+*/
 
 #include "libft.h"
 

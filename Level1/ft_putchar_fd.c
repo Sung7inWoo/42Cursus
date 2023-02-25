@@ -6,12 +6,13 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 13:19:44 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/19 16:03:49 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:41:44 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	Outputs the character ’c’ to the given file descriptor.
+	The function ft_putchar_fd use write to copy the character c
+	in the file descriptor fd.
 */
 
 #include "libft.h"

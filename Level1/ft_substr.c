@@ -6,9 +6,15 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 13:53:33 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/19 14:52:03 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/25 22:09:03 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_substr creat a substring from the string s.
+	The substring begin at index of start and copy for len size in substring.
+	Return the substring creat from s, or NULL if memory not allocated.
+*/
 
 #include "libft.h"
 

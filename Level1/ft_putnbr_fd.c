@@ -6,12 +6,13 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 13:41:51 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/19 16:04:46 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:43:32 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	Outputs the string ’s’ to the given file descriptor followed by a newline.
+	The function ft_putnbr_fd use copy a integer in the file descriptor fd.
+	The integer must to be change in characters.
 */
 
 #include "libft.h"

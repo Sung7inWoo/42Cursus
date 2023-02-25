@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 02:15:23 by hani              #+#    #+#             */
-/*   Updated: 2023/02/25 03:50:53 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/25 21:35:08 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_lstmap creat a new list.
+*/
 
 #include "libft.h"
 

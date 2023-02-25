@@ -6,9 +6,15 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 15:00:10 by hani              #+#    #+#             */
-/*   Updated: 2023/02/21 21:35:08 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:44:51 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_split use character c delimiter to split a string s.
+	Free the memory allocated by malloc after all the split is done.
+	Return the array of new strings.
+*/
 
 #include "libft.h"
 
@@ -51,9 +57,9 @@ static int	count(char *s, char c)
 
 static char	*subcpy(char *s, char c, int num)
 {
-	int	i;
-	int	start;
-	int	end;
+	int		i;
+	int		start;
+	int		end;
 	char	*ptr;
 
 	i = 0;
@@ -75,9 +81,11 @@ static char	*subcpy(char *s, char c, int num)
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
-	int	i;
-	int	num;
+	int		i;
+	int		num;
 
+	if (!(s))
+		return (NULL);
 	i = 0;
 	num = count((char *)s, c);
 	arr = (char **)malloc((num + 1) * sizeof(char *));

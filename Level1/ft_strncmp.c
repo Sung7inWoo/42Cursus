@@ -3,12 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 18:39:05 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/25 04:25:17 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/25 22:02:29 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_strncmp compares not more then n characters
+	of the NUL-terminated strings s1 and s2.
+	Returns an integer greater than, equal to, or less then 0,
+	according the string s1 is greater than, equal to, or less then s2.
+*/
 
 #include "libft.h"
 

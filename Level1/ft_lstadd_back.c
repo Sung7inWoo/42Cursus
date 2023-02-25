@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 19:34:39 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/24 22:01:56 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/25 21:33:05 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_lstadd_back add a new node at the end of the list.
+*/
 
 #include "libft.h"
 

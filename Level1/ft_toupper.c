@@ -6,9 +6,16 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:16:58 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/16 16:55:49 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/25 22:10:19 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_toupper converts an lower-case
+	to the corresponding upper-case letter.
+	Return the corresponding upper-case letter,
+	or change nothing if is not an lower-case.
+*/
 
 #include "libft.h"
 

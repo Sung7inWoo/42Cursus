@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:35:35 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/24 21:41:09 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/25 21:37:13 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	-while (lst) iterates until the last node of linked list.
-	but it's gonna point to "temp lst"!!!
-	-Unlike while (lst->next) it'll iterate till the second to last node
-	and point to the last node.
+	The function ft_lstsize count every node of the list.
+	Return the lenght of the list.
 */
 
 #include "libft.h"

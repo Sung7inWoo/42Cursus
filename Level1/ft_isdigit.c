@@ -6,14 +6,13 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:16:12 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/19 15:58:43 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:29:49 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	The isdigit() function tests for a decimal digit character.
-RETURN The isdigit() and isnumber() functions return zero if the character tests false and
-     return non-zero if the character tests true.
+	The function ft_isdigit test every caracteres if they are digit in ASCII table.
+	Return 0 if the characters test is false.
 */
 
 #include "libft.h"

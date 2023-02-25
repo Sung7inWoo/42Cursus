@@ -6,9 +6,17 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 15:01:00 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/21 16:46:26 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/25 22:05:35 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_strnstr locates the first occurence of
+	null terminated string needle in the string haystack,
+	where no more than len charactere are searched.
+	Return pointer to the first character of the first occurence of needle.
+	If needle empty return haystack, if needle occurs nowhere return NULL.
+*/
 
 #include "libft.h"
 

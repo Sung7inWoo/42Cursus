@@ -3,30 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:06:58 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/24 20:14:26 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/25 21:36:36 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Allocates (with malloc(3)) and returns a new node.
-The member variable ’content’ is initialized with
-the value of the parameter ’content’. The variable
-’next’ is initialized to NULL.*/
+/*
+	The function ft_lstnew creat a new node with the new content send in argument.
+	Return the pointer to the content with malloc memory allocated.
+*/
 
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*newNode;
+	t_list	*newnode;
 
-	newNode = NULL;
-	newNode = (t_list *)malloc(sizeof(t_list));
-	if (newNode != NULL)
+	newnode = NULL;
+	newnode = (t_list *)malloc(sizeof(t_list));
+	if (newnode != NULL)
 	{
-		newNode->content = content;
-		newNode->next = NULL;
+		newnode->content = content;
+		newnode->next = NULL;
 	}
-	return (newNode);
+	return (newnode);
 }

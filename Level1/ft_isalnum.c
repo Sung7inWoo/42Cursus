@@ -6,15 +6,14 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:17:12 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/19 15:56:45 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:27:50 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	The isalnum() function tests for any character for which isalpha(3) or isdigit(3) is
-     true.  The value of the argument must be representable as an unsigned char.
-RETURN The isalnum() function returns zero if the character tests false and returns non-zero if
-     the character tests true.
+	The function ft_isalnum test every caracteres if they are alpha
+	- lower or upper case - or digit in ASCII table.
+	Return 0 if the characters test is false.
 */
 
 #include "libft.h"

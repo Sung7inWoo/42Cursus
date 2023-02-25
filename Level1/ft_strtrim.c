@@ -6,9 +6,15 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 15:12:44 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/19 17:49:35 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/25 22:08:43 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_strtrim copy the string s1 in new string,
+	remove the set of charactere at begining and end of s1.
+	Return the new trimmed string.
+*/
 
 #include "libft.h"
 

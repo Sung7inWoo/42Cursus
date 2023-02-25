@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 02:10:11 by hani              #+#    #+#             */
-/*   Updated: 2023/02/25 02:14:15 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/25 21:34:20 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_lstiter pass the nodes start from lst
+	in function pointed by f one by one.
+*/
 
 #include "libft.h"
 

@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 23:44:17 by hani              #+#    #+#             */
-/*   Updated: 2023/02/25 02:05:18 by hani             ###   ########.fr       */
+/*   Updated: 2023/02/25 21:33:33 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The function ft_lstclear pass the node pointed by lst and the nodes after
+	to the function pointed by del, and free the memory of the nodes.
+*/
 
 #include "libft.h"
 

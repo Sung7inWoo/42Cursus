@@ -6,13 +6,13 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:14:52 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/19 15:51:54 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:25:50 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	The atoi() function converts the initial portion of the string pointed to by str to int
-     representation.
+The function ft_atoi convert the initial portion of the string into int.
+Return the int.
 */
 
 #include "libft.h"

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hani <hani@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:06:58 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/23 16:08:20 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/24 20:14:26 by hani             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ the value of the parameter ’content’. The variable
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*ptr;
+	t_list	*newNode;
 
-	ptr = NULL;
-	ptr = (t_list *)malloc(sizeof(t_list));
-	if (ptr != NULL)
+	newNode = NULL;
+	newNode = (t_list *)malloc(sizeof(t_list));
+	if (newNode != NULL)
 	{
-		ptr->content = content;
-		ptr->next = NULL;
+		newNode->content = content;
+		newNode->next = NULL;
 	}
-	return (ptr);
+	return (newNode);
 }

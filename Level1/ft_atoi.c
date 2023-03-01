@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:14:52 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/26 18:23:29 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/03/02 00:15:03 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= 48 && *str <= 57)
 	{
-		res = (res * 10) + (*str - '0') * sign;
+		res = (res * 10) + (*str - '0');
 		str++;
 	}
-	return (res);
+	return (res * sign);
 }

@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:19:43 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/26 18:19:49 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/02/28 20:52:12 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_bzero(void *str, size_t n)
 {
 	unsigned char	*ptr;
 
-	ptr = str;
+	ptr = (unsigned char *)str;
 	while (n-- > 0)
-		*ptr++ = '\0';
+		*ptr++ = 0;
 }

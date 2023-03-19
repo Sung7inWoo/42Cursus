@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:22:01 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/02/26 18:22:02 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/03/10 18:20:27 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,6 @@ char	**ft_split(char const *s, char c)
 	num = count((char *)s, c);
 	arr = (char **)malloc((num + 1) * sizeof(char *));
 	if (!(arr))
-		return (NULL);
-	if (s == NULL)
 		return (NULL);
 	arr[num] = NULL;
 	while (i < num)

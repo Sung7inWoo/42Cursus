@@ -6,12 +6,11 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 15:26:32 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/03/19 21:37:52 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/03/20 18:00:54 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdarg.h>
+#include "ft_printf.h"
 
 int	ft_putnbr(long long n, int *length)
 {
@@ -40,21 +39,38 @@ int	ft_putstr(char *str,int *length)
 	i = 0;
 	if (!str)
 	{
-		write(1, "(null)", 6);
-		*length += 6;
+		*length += write(1, "(null)", 6);
+		return (*length);
 	}
 	while (str[i])
-	{
-		write(1, &str[i++], 1);
-		*length++;
-	}
+			*length += write(1, &str[i++], 1);
 	return (*length);
 }
 
-int	ft_hexidecimal(unsigned long long n, char c, int *length)
+int	ft_base16(unsigned long long n, char c, int *length)
 {
-	int	i;
-	
+	int		i;
+	char	res[16];
+
+	i = 0;
+	if (c == 'x' || c == 'X')
+		n = (unsigned int)n;
+	if (n == 0)
+		res[i++] = '0';
+	while (n > 0)
+	{
+		if (c == 'x' || c == 'p')
+			res[i] = "0123456789abcdef"[n % 16];
+		else
+			res[i] = "0123456789ABCDEF"[n % 16];
+		i++;
+		n /= 16;
+	}
+	if (c == 'p')
+		*length += write(1, "0x", 2);
+	while (i > 0)
+		*length += write(1, &res[--i], 1);
+	return (*length);
 }
 
 int	check_type(char c, va_list list, int *length)
@@ -65,38 +81,33 @@ int	check_type(char c, va_list list, int *length)
 		*length += write(1, &c, 1);
 	}
 	else if (c == 's')
-		*length += ft_putstr(va_arg(list, char *), &length);
-	else if (c == 'p')
-		*length += ;
+		ft_putstr(va_arg(list, char *), length);
+	else if (c == 'p' || c == 'x' || c == 'X')
+		ft_base16(va_arg(list, unsigned long long), c, length);
 	else if (c == 'd' || c == 'i')
-		*length += ft_putnbr(va_arg(list, int), &length);
+		ft_putnbr(va_arg(list, int), length);
 	else if (c == 'u')
-		*length += ft_putnbr(va_arg(list, unsigned int), &length);
-	else if (c == 'x' || c == 'X')
-		*length += ;
+		ft_putnbr(va_arg(list, unsigned int), length);
+	else if (c == '%')
+		*length += write(1, "%%", 1);
 	return (*length);
 }
 
 int	ft_printf(const char *str, ...)
 {
+	int		i;
 	int		length;
 	va_list	list;
-	int		i;
 
 	i = 0;
-	va_start(list, str);
 	length = 0;
+	va_start(list, str);
 	while (str[i])
 	{
 		if (str[i] == '%')
-		{
-			if (str[i + 1] == '%')
-				length += write(1, "%", 1);
-			else
-				length += check_type(str[++i], list, &length);
-		}
+			check_type(str[++i], list, &length);
 		else
-			length += write(1, str[i], 1);
+			length += write(1, &str[i], 1);
 		i++;
 	}
 	va_end(list);

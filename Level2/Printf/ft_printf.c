@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 15:26:32 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/03/20 18:00:54 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/03/20 18:17:43 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_putnbr(long long n, int *length)
 	return (*length);
 }
 
-int	ft_putstr(char *str,int *length)
+int	ft_putstr(char *str, int *length)
 {
 	int	i;
 

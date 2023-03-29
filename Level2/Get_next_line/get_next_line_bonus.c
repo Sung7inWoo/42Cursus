@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 01:31:44 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/03/30 01:31:53 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/03/30 01:59:35 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*read_file(int fd, char *buff, char *stash)
 	while (read_status != 0)
 	{
 		read_status = read(fd, buff, BUFFER_SIZE);
-		if (read_status = -1)
+		if (read_status == -1)
 			return (NULL);
-		if (read_status = 0)
+		if (read_status == 0)
 			break ;
 		buff[read_status] = '\0';
 		if (!stash)

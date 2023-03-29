@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 23:56:05 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/03/30 00:23:38 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/03/30 02:10:12 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,25 +76,27 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (ptr);
 }
 
-t_var	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	t_var	p;
+	int		i;
+	int		j;
+	int		n;
+	char	*ptr;
 
 	if (s == NULL)
 		return (NULL);
 	if (ft_strlen(s) <= start || len == 0)
 		return (ft_strdup(""));
-	p.n = ft_strlen(&s[start]);
-	if (p.n < len)
-		p.size = p.n + 1;
+	n = ft_strlen(&s[start]);
+	if (n < len)
+		ptr = (char *)malloc((n + 1) * sizeof(char));
 	else
-		p.size = len + 1;
-	p.ptr = (char *)malloc(p.size * sizeof(char));
-	if (!(p.ptr))
+		ptr = (char *)malloc((len + 1) * sizeof(char));
+	if (!(ptr))
 		return (NULL);
-	p.i = 0;
-	p.j = start - 1;
-	while (s[++p.j])
-		p.ptr[p.i++] = s[p.j];
-	return (p.ptr);
+	i = 0;
+	j = start - 1;
+	while (s[++j])
+		ptr[i++] = s[j];
+	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 23:54:42 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/03/30 02:04:24 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/03/30 18:14:50 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ char	*ft_clean(char *line)
 
 char	*get_next_line(int fd)
 {
-	char	*buff;
-	char	*line;
+	char		*buff;
+	char		*line;
 	static char	*stash[OPEN_MAX];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)

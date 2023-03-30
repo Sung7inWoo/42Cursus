@@ -6,20 +6,20 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 01:30:27 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/03/30 02:09:52 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/03/30 18:12:48 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 42
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <limits.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <limits.h>
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *str);

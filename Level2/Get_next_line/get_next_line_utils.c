@@ -6,7 +6,7 @@
 /*   By: jthanikp <jthanikp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 23:56:05 by jthanikp          #+#    #+#             */
-/*   Updated: 2023/03/30 02:10:12 by jthanikp         ###   ########.fr       */
+/*   Updated: 2023/03/30 18:21:15 by jthanikp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ size_t	ft_strlen(const char *str)
 	size_t	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 		i++;
-	return(i);
+	return (i);
 }
 
 char	*ft_strchr(const char *str, int c)
@@ -78,10 +78,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	int		j;
-	int		n;
-	char	*ptr;
+	size_t		i;
+	size_t		j;
+	size_t		n;
+	char		*ptr;
 
 	if (s == NULL)
 		return (NULL);
@@ -97,6 +97,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	j = start - 1;
 	while (s[++j])
-		ptr[i++] = s[j];
+	{
+		if (i < len)
+			ptr[i++] = s[j];
+	}
+	ptr[i] = '\0';
 	return (ptr);
 }
